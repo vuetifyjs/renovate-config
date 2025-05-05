@@ -10,7 +10,6 @@
   "dependencyDashboard": true,
   "minimumReleaseAge": "14 days",
   "ignoreDeps": ["babel-plugin-add-import-extension"],
-  "bumpVersion": "patch",
   "dependencyDashboardApproval": true,
   "rebaseWhen": "conflicted",
   "packageRules": [
