@@ -25,5 +25,6 @@
       "automergeType": "branch",
       "minimumReleaseAge": "5 minutes"
     }
-  ]
+  ],
+  "postUpdateOptions": ["pnpmDedupe"]
 }
