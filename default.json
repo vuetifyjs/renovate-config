@@ -22,6 +22,7 @@
       ],
       "dependencyDashboardApproval": false,
       "automerge": true,
+      "automergeType": "branch",
       "minimumReleaseAge": "5 minutes"
     }
   ]
