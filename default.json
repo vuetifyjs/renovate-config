@@ -1,0 +1,24 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    ":semanticPrefixFixDepsChoreOthers",
+    ":ignoreModulesAndTests",
+    ":pinOnlyDevDependencies",
+    "group:allNonMajor",
+    "workarounds:all"
+  ],
+  "dependencyDashboard": true,
+  "minimumReleaseAge": "14 days",
+  "ignoreDeps": ["babel-plugin-add-import-extension"],
+  "bumpVersion": "patch",
+  "dependencyDashboardApproval": true,
+  "rebaseWhen": "conflicted",
+  "packageRules": [
+    {
+      "matchPackageName": ["@vuetify/one", "@vuetify/api-types"],
+      "dependencyDashboardApproval": false,
+      "automerge": true,
+      "minimumReleaseAge": "5 minutes"
+    }
+  ]
+}
