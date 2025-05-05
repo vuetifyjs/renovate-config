@@ -4,7 +4,6 @@
     ":semanticCommitScope(package)",
     ":ignoreModulesAndTests",
     ":pinOnlyDevDependencies",
-    "group:allNonMajor",
     "workarounds:all"
   ],
   "dependencyDashboard": true,
@@ -13,6 +12,10 @@
   "dependencyDashboardApproval": true,
   "rebaseWhen": "conflicted",
   "packageRules": [
+    {
+      "matchManagers": ["npm"],
+      "extends": ["group:allNonMajor"]
+    },
     {
       "matchPackageNames": [
         "vuetify",
@@ -23,6 +26,16 @@
       "automerge": true,
       "automergeType": "branch",
       "minimumReleaseAge": "5 minutes"
+    },
+    {
+      "groupName": "GitHub Actions",
+      "matchManagers": ["github-actions"],
+      "extends": [":semanticCommitScope(package)"]
+    },
+    {
+      "groupName": "Docker",
+      "matchManagers": ["docker"],
+      "extends": [":semanticCommitScopeDisabled"]
     }
   ],
   "postUpdateOptions": ["pnpmDedupe"]
