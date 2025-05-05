@@ -15,7 +15,11 @@
   "rebaseWhen": "conflicted",
   "packageRules": [
     {
-      "matchPackageName": ["@vuetify/one", "@vuetify/api-types"],
+      "matchPackageName": [
+        "vuetify",
+        "@vuetify/one",
+        "@vuetify/api-types"
+      ],
       "dependencyDashboardApproval": false,
       "automerge": true,
       "minimumReleaseAge": "5 minutes"
