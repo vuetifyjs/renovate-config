@@ -1,7 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    ":semanticCommitScope(package)",
+    ":semanticCommitScopeDisabled",
     ":ignoreModulesAndTests",
     ":pinOnlyDevDependencies",
     "workarounds:all"
@@ -30,12 +30,11 @@
     {
       "groupName": "GitHub Actions",
       "matchManagers": ["github-actions"],
-      "extends": [":semanticCommitScope(package)"]
+      "extends": [":semanticCommitScope(ci)"]
     },
     {
       "groupName": "Docker",
-      "matchManagers": ["docker"],
-      "extends": [":semanticCommitScopeDisabled"]
+      "matchManagers": ["docker"]
     }
   ],
   "postUpdateOptions": ["pnpmDedupe"]
