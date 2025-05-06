@@ -7,7 +7,7 @@
     "workarounds:all"
   ],
   "dependencyDashboard": true,
-  "minimumReleaseAge": "14 days",
+  "minimumReleaseAge": "7 days",
   "ignoreDeps": ["babel-plugin-add-import-extension"],
   "dependencyDashboardApproval": true,
   "rebaseWhen": "conflicted",
